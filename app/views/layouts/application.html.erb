@@ -15,8 +15,8 @@
       <%= link_to "Home", root_path %>
     </nav>
 
-    <% flash.each do |name, msg| %>
-      <%= content_tag :div, msg, class: name %>
+    <% flash.each do |message_type, message| %>
+      <h2 class="<%= message_type %>"><%= message %></h2>
     <% end %>
 
     <h1>Viewing Party Lite</h1>
